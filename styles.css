@@ -1,0 +1,146 @@
+/* Base reset */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  color: #222;
+  background: #faf8f2;
+  font-family: "Patrick Hand", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+}
+
+/* Subtle paper texture effect */
+.paper-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(#fff8 0.5px, transparent 0.5px);
+  background-size: 3px 3px, 100% 24px; /* dots + faint notebook lines */
+  background-position: 0 0, 0 22px;
+  opacity: 0.7;
+}
+
+.page {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.brand {
+  padding: 64px 24px 16px;
+  text-align: center;
+}
+
+.logo-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.logo {
+  margin: 0;
+  font-family: "Shadows Into Light", "Patrick Hand", cursive;
+  font-size: 56px;
+  letter-spacing: 1px;
+  color: #1e1e1e;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.logo-num { 
+  display: inline-block; 
+  transform: rotate(-6deg);
+  border-bottom: 3px solid #111; 
+}
+
+.tag {
+  margin: 8px 0 0;
+  font-size: 18px;
+  color: #555;
+}
+
+.notice {
+  padding: 24px;
+  text-align: center;
+}
+
+.headline {
+  display: inline-block;
+  margin: 8px auto 8px;
+  padding: 6px 14px;
+  font-size: 28px;
+  border: 2px dashed #2a2a2a;
+  border-radius: 8px;
+  background: #fffdf7;
+  box-shadow: 2px 2px 0 #222;
+}
+
+.blurb {
+  margin: 10px auto 20px;
+  max-width: 560px;
+  font-size: 18px;
+  color: #444;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  appearance: none;
+  border: 2px solid #111;
+  background: #fff;
+  color: #111;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 2px 2px 0 #111;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.btn:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 #111; }
+.btn:active { transform: translate(0, 0); box-shadow: 1px 1px 0 #111; }
+
+.btn-primary {
+  background: #ffeab6;
+}
+
+.btn-ghost {
+  background: #ffffff;
+}
+
+.footer {
+  margin-top: 48px;
+  padding: 24px;
+  text-align: center;
+  color: #666;
+}
+
+/* Doodles */
+.doodle.spark {
+  position: absolute;
+  right: -24px;
+  top: -10px;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #111;
+  border-radius: 50% 46% 40% 60% / 50% 35% 65% 50%;
+  transform: rotate(12deg);
+  background:
+    radial-gradient(circle at 50% 50%, #fff 45%, transparent 46%),
+    conic-gradient(from 0deg, #111 0 6deg, transparent 6deg 30deg, #111 30deg 36deg, transparent 36deg 60deg, #111 60deg 66deg, transparent 66deg 90deg, #111 90deg 96deg, transparent 96deg 120deg, #111 120deg 126deg, transparent 126deg 150deg, #111 150deg 156deg, transparent 156deg 180deg, #111 180deg 186deg, transparent 186deg 210deg, #111 210deg 216deg, transparent 216deg 240deg, #111 240deg 246deg, transparent 246deg 270deg, #111 270deg 276deg, transparent 276deg 300deg, #111 300deg 306deg, transparent 306deg 330deg, #111 330deg 336deg, transparent 336deg 360deg);
+  opacity: 0.9;
+}
+
+/* Responsiveness */
+@media (min-width: 720px) {
+  .logo { font-size: 72px; }
+  .headline { font-size: 32px; }
+  .blurb { font-size: 20px; }
+}
+
+
